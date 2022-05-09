@@ -36,6 +36,13 @@ export default function CharacterList() {
           : <>
             <div>
               <form>
+                <label htmlFor='status'>Character Status</label>
+                <select name='status' id='status' value={status} onChange={handleStatusChange}>
+                  <option value='all'>All</option>
+                  <option value='alive'>Alive</option>
+                  <option value='dead'>Dead</option>
+                  <option value='unknown'>Unknown</option>
+                </select>
               </form>  
             </div>
             {characters.map((character) => (
