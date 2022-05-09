@@ -29,6 +29,7 @@ export default function CharacterDetail() {
           <img alt='photo of character' src={character.image} />
           <p>{character.status}</p>
           <p>{character.species}</p>
+          <p>{character.gender}</p>
         </div>
     }
     </>
