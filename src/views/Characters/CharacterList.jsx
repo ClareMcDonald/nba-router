@@ -8,6 +8,10 @@ export default function CharacterList() {
   const location = useLocation();
   const status = new URLSearchParams(location.search).get('status') ?? 'all';
     
+  async function handleStatusChange(e) {
+    history.push(`/?status=${e.target.value}`);
+  }
+
   useEffect(() => {
     async function fetchCharacters() {
       setLoading(true);
@@ -30,8 +34,7 @@ export default function CharacterList() {
   return (
     <>
       <h1>Rick and Morty: Characters</h1>
-    {
-      loading
+    {loading
         ? <img alt='loading spinner' src='/spinner.gif'/>
           : <>
             <div>

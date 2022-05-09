@@ -8,7 +8,7 @@ export default function App() {
       <Route path='/characters/:id'>
         <CharacterDetail />
       </Route>
-      <Route path='/characters'>
+      <Route path='/'>
         <CharacterList />
       </Route>
     </Switch>
